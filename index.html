@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pixel art maker by Yaver</title>
+
+    <!-- HTML -->
+    <!-- Custom Styles -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+</head>
+
+<body>
+    <h1>Pixmacr &reg;</h1>
+    <div class="controls">
+    <input type="button" id="undo" value="Undo">
+    <input type="button" id="redo" value="Redo">
+   </div>
+    <div id="paint-zone"></div>
+    <div class="controls">
+        <label for="color-selector">Select Color:</label>
+        <input value="#FFFFFF" type="color" name="color-selector" id="color-selector">
+        <br>
+        <input type="button" id="clear-button" value="Clear All">
+        <input type="button" id="erase-selector-button" value="Select Eraser">
+        <br>
+        <label for="watermark-checkbox">Watermark:</label>
+        <input type="checkbox" name="watermark-checkbox" id="watermark-checkbox">
+        <br>
+        <label for="select-color">Select Color From Cell:</label>
+        <input type="checkbox" name="select-color" id="select-color">
+        <br>
+        <label for="cell-slider">Canvas Size: </label>
+        <input type="range" name="cell-slider" id="cells-slider" min='1' max='50' value='10'> 
+        <span id="canvas-size-shower">(10)</span>
+        <br>
+        <input type="button" id="export-button" value="Export With ❤️">
+
+    </div>
+    <canvas id="canvas"></canvas>
+    Made With ❤️ by Yaver
+    <hr>
+    <!-- Project -->
+    <script src="stack.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
+

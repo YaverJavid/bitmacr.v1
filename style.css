@@ -1,0 +1,153 @@
+body {
+    font-size: 15pt;
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+
+.cell {
+    width: 10%;
+    height: 10vw;
+    border: 0.5px groove black;
+    box-sizing: border-box;
+    background: #00000000
+}
+
+#paint-zone {
+    display: flex;
+    flex-wrap: wrap;
+    /* background-image: url("images/background.png");
+    background-size:100% 80%; */
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/white+0,d1d360+100;Wax+3D */
+background: white; /* Old browsers */
+background: -moz-linear-gradient(top,  white 0%, wheat 50%, gray 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  white 0%,wheat 50%, gray 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  white 0%,wheat 50%, gray 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='white', endColorstr='wheat',GradientType=0 ); /* IE6-9 */
+
+
+}
+
+
+
+input[type=color] {
+    border: none;
+    background: none;
+    outline-color: #00000000;
+    padding: 0;
+    margin-top: 25px;
+
+}
+
+input[type=button] {
+    margin: 0;
+    border: 2px solid white;
+    background: none;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 20px;
+    outline-color: #00000000;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+
+}
+
+input[type=button]:hover {
+    color: cornflowerblue ;
+    background: white;
+
+
+}
+
+input[type=range] {
+    background: #222222!important;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    border-radius:8px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  appearance: none;
+  width: 16px; 
+  height: 16px; 
+  background: black; 
+  cursor: pointer;
+    border-radius:8px;
+    
+
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 16px; 
+  height: 16px; 
+  background: #222222!important; 
+  cursor: pointer; 
+  border-radius:8px;
+}
+
+canvas {
+    display: none
+}
+
+hr {
+    width: 80%;
+    height: 1vw;
+    border-radius: 500px;
+    border: none;
+    background: white;
+}
+
+
+input[type=checkbox]:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+body input:checked~input[type=checkbox]:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+body input[type=checkbox]:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+input{
+    margin-bottom:25px;
+}
+
+.controls{
+    background: wheat;
+    margin: 25px 25px;
+    border-radius: 25px;
+    color:black!important;
+}
+
+.controls > *{
+    color:black!important;
+    border-color: black!important
+}
+
+#undo, #redo{
+    margin: 20px 10px;
+}
+
+h1{
+   color:wheat
+}
