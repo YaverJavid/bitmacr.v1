@@ -1,9 +1,9 @@
 {
-    "name": "Pixmacr",
-    "short_name": "pxam",
+    "name": "Pixmacr By Yaver With ❤️",
+    "short_name": "Pxam",
     "start_url": ".",
-    "background_color": "#2537FA",
-    "theme_color": "#2537FA",
+    "background_color": "black",
+    "theme_color": "black",
     "display":"standalone",
     "icons": [
         {   "src":"images/favicon.png",
