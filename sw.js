@@ -10,7 +10,7 @@ self.addEventListener('install', e => {
                 "index.html",
                 "sw.js",
                 "stack.js",
-                "favicon.ico"
+                ""
                 ])
         })
     )

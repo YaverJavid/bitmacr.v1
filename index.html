@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pixel art maker by Yaver</title>
+    <meta name="theme-color" content="wheat">
+    <title>Pixmacr - A pixel art maker by Yaver</title>
 
     <!-- HTML -->
     <!-- Custom Styles -->
@@ -18,38 +19,85 @@
 <body>
     <h1>Pixmacr &reg;</h1>
     <div class="controls">
-    <input type="button" id="undo" value="Undo">
-    <input type="button" id="redo" value="Redo">
-   </div>
+        <input type="button" id="undo" value="Undo">
+        <input type="button" id="redo" value="Redo">
+    </div>
     <div id="paint-zone"></div>
     <div class="controls">
         <label for="color-selector">Select Color:</label>
-        <input value="#FFFFFF" type="color" name="color-selector" id="color-selector">
+        <input value="#FF0000" type="color" name="color-selector" id="color-selector">
         <br>
         <input type="button" id="clear-button" value="Clear All">
         <input type="button" id="erase-selector-button" value="Select Eraser">
-        <br>
-        <label for="watermark-checkbox">Watermark:</label>
-        <input type="checkbox" name="watermark-checkbox" id="watermark-checkbox">
         <br>
         <label for="select-color">Select Color From Cell:</label>
         <input type="checkbox" name="select-color" id="select-color">
         <br>
         <label for="cell-slider">Canvas Size: </label>
-        <input type="range" name="cell-slider" id="cells-slider" min='1' max='50' value='10'> 
+        <input type="range" name="cell-slider" id="cells-slider" min='1' max='50' value='10'>
         <span id="canvas-size-shower">(10)</span>
+        <h3>Pattern Painting </h3>
+        <br>
+        <hr>
+        <label for="multiply-q-selector">Multiply From: </label>
+        <select name="multiply-q-selector" id="multiply-q-selector">
+            <option value="1">Quadrant I</option>
+            <option value="2">Quadrant II</option>
+            <option value="3">Quadrant III</option>
+            <option value="4">Quadrant IV</option>
+
+        </select> <br>
+        <details>
+            <summary>
+                Copy To : <span id="copy-targets-shower"></span>
+            </summary>
+            <br>
+            <input type="button" id="select-all-copy-targets" value="Select All">
+            <br>
+            <label for="q1-multiply-target-checkbox">Quadrant I</label>
+            <input type="checkbox" id="q1-multiply-target-checkbox" checked>
+            <br>
+            <label for="q2-multiply-target-checkbox">Quadrant II</label>
+            <input type="checkbox" id="q2-multiply-target-checkbox" checked>
+            <br>
+            <label for="q3-multiply-target-checkbox">Quadrant III</label>
+            <input type="checkbox" id="q3-multiply-target-checkbox" checked>
+            <br>
+            <label for="q4-multiply-target-checkbox">Quadrant IV</label>
+            <input type="checkbox" id="q4-multiply-target-checkbox" checked>
+            <br>
+        </details>
+        <br>
+        <input type="button" value="Multiply" id="multiply-q-button">
+        <h3>Guide Settings</h3>
+        <br>
+        <hr>
+        <label for="guide-checkbox">Quadrant Guides:</label>
+        <input type="checkbox" name="guide-checkbox" id="guide-checkbox">
+        <br>
+        <label for="border-checkbox">Borders:</label>
+        <input type="checkbox" name="border-checkbox" id="border-checkbox" checked>
+        <br>
+        <input type="button" id="border-color-button" value="Change Border Color">
+        <hr>
+        <h3>Export Settings</h3>
+        <br>
+        <label for="cell-border-width-slider">Cell Border: </label>
+        <input type="range" name="cell-border-width-slider" id="cell-border-width-slider" min='0' max='4' value='1' step="0.2">
+        <span id="cell-border-width-shower">(1)</span>
+        <br>
+        <label for="watermark-checkbox">Watermark:</label>
+        <input type="checkbox" name="watermark-checkbox" id="watermark-checkbox">
         <br>
         <input type="button" id="export-button" value="Export With ❤️">
 
     </div>
     <canvas id="canvas"></canvas>
-    Made With ❤️ by Yaver
+    Made With ❤️ by Yaver V.1.0.0
     <hr>
     <!-- Project -->
-    <script src="sw.js"></script>
     <script src="stack.js"></script>
     <script src="main.js"></script>
 </body>
 
 </html>
-
